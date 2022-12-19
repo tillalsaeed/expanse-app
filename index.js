@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
+import path from "path";
 import {register, product} from "./routes/index.js";
 
 
