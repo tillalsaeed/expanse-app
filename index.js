@@ -26,16 +26,16 @@ const connect = () => {
 }
 
 
-const Port = process.env.PORT || 8005;
+const Port = 8080 || process.env.PORT;
 
 app.use(express.static(path.join(__dirname, "./client/build")));
-app.get("*", (req,res) => {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
+connect();
 
 app.listen(Port, () => {
-    connect();
+   
     console.log('Server Created succesfully ' + Port)});
 
 
